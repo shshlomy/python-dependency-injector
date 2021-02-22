@@ -317,9 +317,6 @@ def wire(  # noqa: C901
         packages: Optional[Iterable[ModuleType]] = None,
 ) -> None:
     """Wire container providers with provided packages and modules."""
-    if not _is_declarative_container_instance(container):
-        raise Exception('Can wire only an instance of the declarative container')
-
     if not modules:
         modules = []
 
